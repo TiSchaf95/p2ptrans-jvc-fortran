@@ -1,7 +1,7 @@
 module transform
   
   use utils
-  use hungarian
+  use JVC_alg
   use potential
 
   implicit none
@@ -268,8 +268,8 @@ contains
             tBpos( : , id + 1 : id + n ),n_A, n_B, &
             pot, param)
 
-       call munkres(dist_map, map, dmat, n)
-
+       !call munkres(dist_map, map, dmat, n)
+       call jvc(2,n,dmat,1.0d4,1.0d-4,map, dist_map)
 
        map = map + id
 
