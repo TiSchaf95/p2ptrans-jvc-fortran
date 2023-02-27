@@ -21,4 +21,3 @@ with open('cost.csv', 'w') as f:
 
 Map=[int(Assignment[1][i])+1 for i in range(n)]
 np.savetxt("map.csv", Map, delimiter=",", fmt="%d")
-   
