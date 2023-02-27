@@ -272,7 +272,6 @@ contains
             tBpos( : , id + 1 : id + n ),n_A, n_B, &
             pot, param)
 
-       
        ! write dmat to file to process from python
        open(1, file='file.dat', form="unformatted") ! Adjusted open statement
        write(1) dmat
@@ -289,10 +288,9 @@ contains
        close(10)
        close(9)
        
-       
-       
-       !call munkres(dist_map, map, dmat, n)
-
+       call system('rm file.dat')
+       call system('rm map.csv')
+       call system('rm cost.csv')
 
        map = map + id
 
