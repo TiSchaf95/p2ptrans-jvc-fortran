@@ -7,8 +7,8 @@ p2ptrans allows you to find the best matching between two crystal structures.
 ## Latest Updates
 
 Current version: 2.2.0 (02.24.2023)
-<img src="https://github.com/TiSchaf95/p2ptrans-jvc-fortran/blob/master/p2ptrans_timing.png" width="400">
-<img src="https://github.com/TiSchaf95/p2ptrans-jvc-fortran/blob/master/p2ptrans_speedup.png" width="400">
+
+<img src="https://github.com/TiSchaf95/p2ptrans-jvc-fortran/blob/master/p2ptrans_timing.png" width="400"><img src="https://github.com/TiSchaf95/p2ptrans-jvc-fortran/blob/master/p2ptrans_speedup.png" width="400">
 
 Improved runtime through implementation of the JVC algorithm using scipy-optimize, which solves the linear assingment problem much faster than theformer implemented munkres algorithm. This enables structure matching for larger and more complex crystal structures. For small problems < ~1000 mapped atoms, the original version is faster.  
 
