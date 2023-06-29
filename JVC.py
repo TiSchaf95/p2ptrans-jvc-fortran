@@ -9,7 +9,7 @@ from scipy.optimize import linear_sum_assignment
 import os
 ff = FortranFile('file.dat', 'r') # Specifying read-only access.
 #os.system('rm *.dat')
-data = ff.read_reals(dtype=np.float)
+data = ff.read_reals(dtype=float) #change to dtype=np.float if using numpy version < 1.20!
 n=int(np.sqrt(len(data)))
 dataReshaped = data.reshape(n, n)
 Assignment=linear_sum_assignment(dataReshaped)
