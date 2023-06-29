@@ -7,10 +7,12 @@ p2ptrans allows you to find the best matching between two crystal structures.
 ## Latest Updates
 
 Current version: 2.2.0 (02.24.2023)
+<img src="https://github.com/TiSchaf95/p2ptrans-jvc-fortran/blob/master/p2ptrans_timing.png" width="400">
+<img src="https://github.com/TiSchaf95/p2ptrans-jvc-fortran/blob/master/p2ptrans_speedup.png" width="400">
 
-Improved runtime through implementation of the JVC algorithm using scipy-optimize, which solves the linear assingment problem much faster than theformer implemented munkres algorithm. This enables structure matching for larger and more complex crystal structures.
+Improved runtime through implementation of the JVC algorithm using scipy-optimize, which solves the linear assingment problem much faster than theformer implemented munkres algorithm. This enables structure matching for larger and more complex crystal structures. For small problems < ~1000 mapped atoms, the original version is faster.  
 
-**Important**: For this version, set OMP_NUM_THREADS=1 and copy the JVC.py file in the directory of execution. 
+**Important**: For this version, set OMP_NUM_THREADS=1 and copy the JVC.py file in the directory of execution. For large problems, many independent p2ptrans runs are required, so the runs can be run independly parallel on a cluster. The shown speedup above is assumed for one node, with 20 cores and 20 indepndent calculations. For larger number of nodes used, the speedup will improve further. 
 
 An additional analysis script is supported in the Analysis directory, if the shell output of p2ptrans execution is piped into a file named 'run.out'. This is useful for analysing several hundreds of independent calculations, each in a separate directory.
 
