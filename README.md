@@ -6,7 +6,7 @@ p2ptrans allows you to find the best matching between two crystal structures.
 
 ## Latest Updates
 
-Current version: 2.2.0 (06.29.2023)
+Current version: 2.2.0 (07.11.2023)
 
 <img src="https://github.com/TiSchaf95/p2ptrans-jvc-fortran/blob/master/p2ptrans_timing.png" width="400"><img src="https://github.com/TiSchaf95/p2ptrans-jvc-fortran/blob/master/p2ptrans_speedup.png" width="400">
 
